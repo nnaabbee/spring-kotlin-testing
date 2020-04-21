@@ -8,11 +8,11 @@ import javax.validation.constraints.NotNull
 import javax.validation.constraints.Size
 
 data class UserPostRequest (
-        @NotBlank
-        @Size(max = 100)
+        @field:NotBlank
+        @field:Size(max = 100)
         val name: String,
-        @NotNull
-        @Max(999)
+        @field:NotNull
+        @field:Max(999)
         val age: Int) {
     fun toEntity(): User {
         return User(
